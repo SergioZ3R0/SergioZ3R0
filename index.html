@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SergioZ3R0 | HPC Software Portfolio</title>
-    <meta name="description" content="Portfolio of SergioZ3R0 — developer of nvprobe and srest, open-source HPC tools for GPU benchmarking and Slurm cluster management.">
-    <meta name="keywords" content="SergioZ3R0, nvprobe, srest, HPC, GPU benchmarking, Slurm, NVIDIA, CUDA, open source, high performance computing, cluster management, GPU profiling, Slurm REST API, TUI, terminal user interface, Warewulf, Ansible, Linux, HPCG, HPL, MLPerf, CuPy, Python, Go, Bubble Tea">
+    <meta name="description" content="Portfolio of SergioZ3R0 — developer of nvprobe, srest and one9s, open-source HPC tools for GPU benchmarking, Slurm and OpenNebula cluster management.">
+    <meta name="keywords" content="SergioZ3R0, nvprobe, srest, one9s, HPC, GPU benchmarking, Slurm, NVIDIA, CUDA, OpenNebula, open source, high performance computing, cluster management, GPU profiling, Slurm REST API, TUI, terminal user interface, Warewulf, Ansible, Linux, HPCG, HPL, MLPerf, CuPy, Python, Go, Bubble Tea, virtualization, cloud">
 
     <meta property="og:title" content="SergioZ3R0 | HPC Software Portfolio">
     <meta property="og:description" content="nvprobe and srest — open-source HPC tools for GPU benchmarking and Slurm cluster management.">
@@ -24,12 +24,13 @@
         "name": "SergioZ3R0",
         "url": "https://scszero.com/",
         "jobTitle": "HPC Systems Engineer",
-        "description": "Developer of nvprobe and srest — open-source HPC tools for GPU benchmarking and Slurm cluster management.",
-        "knowsAbout": ["HPC", "NVIDIA CUDA", "GPU Benchmarking", "Slurm", "Linux", "Python", "Go", "Warewulf", "Ansible"],
+        "description": "Developer of nvprobe, srest and one9s — open-source HPC tools for GPU benchmarking, Slurm and OpenNebula cluster management.",
+        "knowsAbout": ["HPC", "NVIDIA CUDA", "GPU Benchmarking", "Slurm", "OpenNebula", "Linux", "Python", "Go", "Warewulf", "Ansible"],
         "sameAs": [
             "https://github.com/SergioZ3R0",
             "https://nvprobe.scszero.com/",
-            "https://srest.scszero.com/"
+            "https://srest.scszero.com/",
+            "https://one9s.scszero.com/"
         ]
     }
     </script>
@@ -100,7 +101,14 @@
         section { padding: 80px 0; }
         section h2 { font-size: 2rem; font-weight: 700; margin-bottom: 48px; text-align: center; font-family: var(--font-mono); color: var(--accent); }
 
-        .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+        .projects {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 24px;
+        }
+        .project-top { grid-column: 1 / -1; }
+        .project-bottom { grid-column: 1 / -1; max-width: 480px; justify-self: center; width: 100%; }
         .project {
             background: var(--surface);
             border: 1px solid var(--border);
@@ -114,11 +122,13 @@
         .project:hover { transform: translateY(-2px); }
         .project-nvprobe:hover { border-color: #39FF88; }
         .project-srest:hover { border-color: #EFB72B; }
+        .project-one9s:hover { border-color: #2E86C1; }
         .project-header { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
         .project-header img { width: 56px; height: 56px; }
         .project h3 { font-size: 1.3rem; font-family: var(--font-mono); }
         .project-nvprobe h3 { color: #39FF88; }
         .project-srest h3 { color: #EFB72B; }
+        .project-one9s h3 { color: #2E86C1; }
         .project p { font-size: 0.9rem; color: var(--muted); margin-bottom: 16px; }
         .project-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
         .tag {
@@ -131,6 +141,7 @@
         }
         .project-nvprobe .tag { background: rgba(57,255,136,0.12); color: #39FF88; }
         .project-srest .tag { background: rgba(239,183,43,0.12); color: #EFB72B; }
+        .project-one9s .tag { background: rgba(46,134,193,0.12); color: #2E86C1; }
 
         .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
         .feature {
@@ -182,6 +193,8 @@
             header h1 { font-size: 2.4rem; }
             header p { font-size: 1rem; }
             .projects { grid-template-columns: 1fr; }
+            .project-top { grid-column: 1; }
+            .project-bottom { grid-column: 1; max-width: 100%; }
             .features { grid-template-columns: 1fr; }
         }
     </style>
@@ -212,7 +225,7 @@
             <section id="projects" aria-labelledby="projects-heading">
                 <h2 id="projects-heading">Projects</h2>
                 <div class="projects">
-                    <a href="https://nvprobe.scszero.com/" class="project project-nvprobe" aria-label="nvprobe">
+                    <a href="https://nvprobe.scszero.com/" class="project project-nvprobe project-top" aria-label="nvprobe">
                         <div class="project-header">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="56" height="56">
                                 <defs>
@@ -240,7 +253,7 @@
                             <span class="tag">GPU</span>
                         </div>
                     </a>
-                    <a href="https://srest.scszero.com/" class="project project-srest" aria-label="srest">
+                    <a href="https://srest.scszero.com/" class="project project-srest project-top" aria-label="srest">
                         <div class="project-header">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="56" height="56">
                                 <rect width="400" height="400" rx="80" fill="#1A1B26"/>
@@ -267,6 +280,31 @@
                             <span class="tag">Go</span>
                             <span class="tag">Bubble Tea</span>
                             <span class="tag">Slurm</span>
+                            <span class="tag">TUI</span>
+                        </div>
+                    </a>
+                    <a href="https://one9s.scszero.com/" class="project project-one9s project-bottom" aria-label="one9s">
+                        <div class="project-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="56" height="56">
+                                <defs>
+                                    <linearGradient id="one9sGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#00adef"/>
+                                        <stop offset="100%" stop-color="#006699"/>
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="75" cy="140" r="35" fill="url(#one9sGrad)"/>
+                                <circle cx="128" cy="105" r="55" fill="url(#one9sGrad)"/>
+                                <circle cx="181" cy="135" r="40" fill="url(#one9sGrad)"/>
+                                <rect x="75" y="110" width="106" height="65" fill="url(#one9sGrad)"/>
+                                <text x="128" y="148" font-family="Inter, sans-serif" font-size="44" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="-1">one<tspan fill="#cceeff">9s</tspan></text>
+                            </svg>
+                            <h3>one9s</h3>
+                        </div>
+                        <p>Terminal user interface for OpenNebula cluster management. Monitor VMs, Hosts and Datastores, manage ACLs and Quotas — all from your terminal.</p>
+                        <div class="project-tags">
+                            <span class="tag">Go</span>
+                            <span class="tag">Bubble Tea</span>
+                            <span class="tag">OpenNebula</span>
                             <span class="tag">TUI</span>
                         </div>
                     </a>
@@ -308,6 +346,10 @@
                     <a href="https://srest.scszero.com/" style="border-color: rgba(239,183,43,0.2);">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" style="fill: none; stroke: #EFB72B;"><path d="M 55 30 H 35 C 20 30 20 45 20 55 V 95 C 20 105 10 110 10 110 C 10 110 20 115 20 125 V 165 C 20 180 20 195 35 195 H 55" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><path d="M 145 30 H 165 C 180 30 180 45 180 55 V 95 C 180 105 190 110 190 110 C 190 110 180 115 180 125 V 165 C 180 180 180 195 165 195 H 145" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         srest
+                    </a>
+                    <a href="https://one9s.scszero.com/" style="border-color: rgba(46,134,193,0.2);">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width:20px; height:20px;"><defs><linearGradient id="one9sC" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00adef"/><stop offset="100%" stop-color="#006699"/></linearGradient></defs><circle cx="75" cy="140" r="35" fill="url(#one9sC)"/><circle cx="128" cy="105" r="55" fill="url(#one9sC)"/><circle cx="181" cy="135" r="40" fill="url(#one9sC)"/><rect x="75" y="110" width="106" height="65" fill="url(#one9sC)"/></svg>
+                        one9s
                     </a>
                 </div>
             </section>
