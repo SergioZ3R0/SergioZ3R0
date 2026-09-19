@@ -2,9 +2,9 @@
 
 Portfolio landing page for [SergioZ3R0](https://github.com/SergioZ3R0), showcasing open-source HPC tools:
 
-- **[nvprobe](https://nvprobe.scszero.com/)** — Lightweight NVIDIA GPU benchmarking & profiling CLI
-- **[srest](https://srest.scszero.com/)** — Terminal user interface for the Slurm REST API
-- **[one9s](https://one9s.scszero.com/)** — Terminal user interface for OpenNebula cluster management
+- **[nvprobe](https://nvprobe.scszero.com/)** - Lightweight NVIDIA GPU benchmarking & profiling CLI
+- **[srest](https://srest.scszero.com/)** - Terminal user interface for the Slurm REST API
+- **[one9s](https://one9s.scszero.com/)** - Terminal user interface for OpenNebula cluster management
 
 ## About
 
